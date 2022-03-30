@@ -15,8 +15,8 @@
             <hr class="underline">
         </section>
         <section id="nav-content">
-            <h1>Home</h1>
-            <h1>Users</h1>
+            <a><h1>Home</h1></a>
+            <a><h1>Users</h1></a>
         </section>
         <section id="nav-footer">
             <hr class="underline">

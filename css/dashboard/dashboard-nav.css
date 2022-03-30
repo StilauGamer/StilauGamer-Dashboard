@@ -33,9 +33,13 @@ nav {
 
 #nav-content a {
     color: white;
+    transition: 0.5s;
     text-decoration: none;
     list-style-type: none;
-    transition: 0.5s;
+}
+
+#nav-content h1 {
+    padding-bottom: 10px;
 }
 
 #nav-content a:hover {

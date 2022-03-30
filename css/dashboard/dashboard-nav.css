@@ -1,0 +1,54 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Title */
+#nav-title {
+    background: blue;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+}
+
+#nav-title .title {
+    padding: 2% 0;
+}
+
+#nav-title .underline {
+    border: none;
+    border-bottom: solid 1.5px black;
+}
+
+/* Content */
+#nav-content {
+    margin-top: 2.5%;
+    font-size: 20px;
+    margin-bottom: auto;
+    background: black;
+}
+
+#nav-content .active {
+    /* Active stuff */
+}
+
+
+/* Footer */
+#nav-footer {
+    background: blue;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+}
+
+#nav-footer .title {
+    padding: 2% 0;
+}
+
+#nav-footer .underline {
+    border: none;
+    border-bottom: solid 1.5px black;
+}

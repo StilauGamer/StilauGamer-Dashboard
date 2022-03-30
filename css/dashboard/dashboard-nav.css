@@ -35,6 +35,7 @@ nav {
     color: white;
     text-decoration: none;
     list-style-type: none;
+    transition: 0.5s;
 }
 
 #nav-content a:hover {

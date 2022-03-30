@@ -31,6 +31,16 @@ nav {
     background: black;
 }
 
+#nav-content a {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#nav-content a:hover {
+    color: black;
+}
+
 #nav-content .active {
     /* Active stuff */
 }

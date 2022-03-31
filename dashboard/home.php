@@ -24,13 +24,11 @@ include "scripts/nav-script.php";
 
             <?php
             while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $table_title = $row['id'];
-                $table_location = $row['username'];
+                $table_title = $row['title'];
+                $table_location = $row['location'];
             ?>
-            <a href="<? echo $table_location ?>"><h1><?php echo $table_title?></h1></a>
+            <a href="<?php echo $table_location; ?>"><h1><?php echo $table_title; ?></h1></a>
             <?php } ?>
-
-            <a href="users"><h1>Users</h1></a>
         </section>
         <section id="nav-footer">
             <hr class="underline">

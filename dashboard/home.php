@@ -1,3 +1,9 @@
+<?php
+
+include "scripts/nav-script.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +21,15 @@
             <hr class="underline">
         </section>
         <section id="nav-content">
-            <a href="test"><h1>Home</h1></a>
+
+            <?php
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $table_title = $row['id'];
+                $table_location = $row['username'];
+            ?>
+            <a href="<? echo $table_location ?>"><h1><?php echo $table_title?></h1></a>
+            <?php } ?>
+
             <a href="users"><h1>Users</h1></a>
         </section>
         <section id="nav-footer">

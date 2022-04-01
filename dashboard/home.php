@@ -1,6 +1,9 @@
 <?php
 
+session_start();
 include "scripts/nav-script.php";
+
+
 
 ?>
 

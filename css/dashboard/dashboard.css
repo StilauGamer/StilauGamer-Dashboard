@@ -35,8 +35,10 @@ nav {
     margin: 20px;
     transition: 1s;
     min-width: 18%;
+    overflow: hidden;
     background: lime;
     border-radius: 15px;
+    border: solid 2px black;
 }
 
 main {

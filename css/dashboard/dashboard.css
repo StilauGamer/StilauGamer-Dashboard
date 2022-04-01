@@ -47,6 +47,7 @@ main {
     min-width: 75%;
     background: lime;
     border-radius: 15px;
+    border: solid 2px black;
 }
 
 @media(max-width: 1300px) {

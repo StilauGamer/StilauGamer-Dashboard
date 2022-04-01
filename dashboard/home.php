@@ -4,7 +4,10 @@ session_start();
 include "scripts/nav-script.php";
 
 
-
+if(!isset($_SESSION["loggedin"])) {
+    header("location: ../login");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>

@@ -20,7 +20,7 @@ nav {
 
 #nav-title .underline {
     border: none;
-    border-bottom: solid 1.5px black;
+    border-bottom: solid 2px black;
 }
 
 /* Content */
@@ -63,5 +63,5 @@ nav {
 
 #nav-footer .underline {
     border: none;
-    border-bottom: solid 1.5px black;
+    border-bottom: solid 2px black;
 }

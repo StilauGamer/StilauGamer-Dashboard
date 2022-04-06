@@ -3,7 +3,6 @@
 session_start();
 include "scripts/nav-script.php";
 
-
 if(!isset($_SESSION["loggedin"])) {
     header("location: ../login");
     exit();
@@ -32,9 +31,12 @@ if(!isset($_SESSION["loggedin"])) {
             while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 $table_title = $row['title'];
                 $table_location = $row['location'];
+                $table_permission = $row['permission'];
+
+                if ($_SESSION["perm_permissions"] == 1) {
             ?>
             <a href="<?php echo $table_location; ?>"><h1><?php echo $table_title; ?></h1></a>
-            <?php } ?>
+            <?php } } ?>
         </section>
         <section id="nav-footer">
             <hr class="underline">

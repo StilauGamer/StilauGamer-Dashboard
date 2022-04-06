@@ -9,8 +9,9 @@ include "mysql.php";
 $username = $_POST["username"];
 $password = $_POST["password"];
 
+# Login
 $stmt = $conn->prepare("SELECT * FROM users WHERE username=:uname");
-$stmt->bindparam(":uname", $username);
+$stmt->bindParam(":uname", $username);
 $stmt->execute();
 $result = $stmt->fetch();
 $db_id = $result["id"];
@@ -30,11 +31,20 @@ if(empty($password)) {
     exit();
 }
 
+# Permissions
+$stmt2 = $conn->prepare("SELECT * permissions WHERE id=:id");
+$stmt2->bindParam(":id", $db_id);
+$stmt2->execute();
+
 if(strtolower($username) == strtolower($db_username) && $password == $db_password) {
     session_start();
     $_SESSION["loggedin"] = true;
     $_SESSION["id"] = $db_id;
     $_SESSION["username"] = $db_username;
+    $_SESSION["permissions"];
+    while($row = $stmt2->fetch(PDO::FETCH_ASSOC)) {
+        $_SESSION["perm_permission"] = $row["Permissions"];
+    }
     header("location: ./dashboard/home");
 } else {
     header("location: ./login?error=Wrong username or password.");

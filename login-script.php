@@ -31,11 +31,22 @@ if(empty($password)) {
     exit();
 }
 
+# Permissions
+$stmt2 = $conn->prepare("SELECT * FROM permissions WHERE id=:id");
+$stmt2->bindParam(":id", $db_id);
+$stmt2->execute();
+
 if(strtolower($username) == strtolower($db_username) && $password == $db_password) {
     session_start();
     $_SESSION["loggedin"] = true;
     $_SESSION["id"] = $db_id;
     $_SESSION["username"] = $db_username;
+
+    while($row = $stmt2->fetch(PDO::FETCH_ASSOC)) {
+        if ($row == 1) {
+            
+        }
+    }
     header("location: ./dashboard/home");
 } else {
     header("location: ./login?error=Wrong username or password.");

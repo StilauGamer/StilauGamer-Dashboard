@@ -1,8 +1,0 @@
-<?php
-
-# Navbar Permissions
-
-
-
-
-?>

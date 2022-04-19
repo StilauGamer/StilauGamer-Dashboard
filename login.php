@@ -38,7 +38,7 @@ if(!isset($_SESSION["loggedin"])) {
 
 <?php
 } else {
-    header("location: ./home");
+    header("location: ./dashboard/home");
     exit();
 }
 ?>

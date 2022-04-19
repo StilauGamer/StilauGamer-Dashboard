@@ -39,3 +39,15 @@ header .header-title {
 header h5 {
   color: white;
 }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+}

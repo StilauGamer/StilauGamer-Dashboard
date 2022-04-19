@@ -43,7 +43,12 @@ if(!isset($_SESSION["loggedin"])) {
         </section>
     </nav>
     <main>
-        main
+        <section id="main-title">
+            main-title
+        </section>
+        <section id="main-content">
+            main-content
+        </section>
     </main>
 </body>
 </html>

@@ -41,10 +41,12 @@ if(strtolower($username) == strtolower($db_username) && $password == $db_passwor
     $_SESSION["loggedin"] = true;
     $_SESSION["id"] = $db_id;
     $_SESSION["username"] = $db_username;
-
     while($row = $stmt2->fetch(PDO::FETCH_ASSOC)) {
-        if ($row == 1) {
-            
+        $columns = array_keys($row, "1");
+        foreach ($columns as $key => $value) {
+            if ($row[$value] == "1") {
+                $_SESSION[$value] = $value;
+            }
         }
     }
     header("location: ./dashboard/home");

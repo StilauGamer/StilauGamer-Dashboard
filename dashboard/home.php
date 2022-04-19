@@ -32,7 +32,7 @@ if(!isset($_SESSION["loggedin"])) {
                 $table_title = $row['title'];
                 $table_location = $row['location'];
                 $table_permission = $row['permission'];
-                if ($table_permission = $_SESSION[$table_permission]) {
+                if ($table_permission == isset($_SESSION[$table_permission])) {
             ?>
             <a href="<?php echo $table_location; ?>"><h1><?php echo $table_title; ?></h1></a>
             <?php } } ?>

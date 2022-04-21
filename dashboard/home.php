@@ -47,7 +47,7 @@ if(!isset($_SESSION["loggedin"])) {
             <h1>Home</h1>
         </section>
         <section id="main-content">
-            main-content
+            <h1>main-content</h1>
         </section>
     </main>
 </body>

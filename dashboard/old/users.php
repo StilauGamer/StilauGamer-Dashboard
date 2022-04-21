@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "../mysql.php";
+include "../../mysql.php";
 
 $stmt = $conn->prepare("SELECT username, password, id FROM users");
 $stmt->execute();
@@ -17,9 +17,9 @@ if(isset($_SESSION["loggedin"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StilauGamer | Users</title>
-    <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard.css">
-    <link rel="stylesheet" type="text/css" href="../css/dashboard/users.css">
-    <link rel="stylesheet" type="text/css" href="../css/theme.css">
+    <link rel="stylesheet" type="text/css" href="../../css/dashboard/old/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../../css/dashboard/old/users.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme.css">
 </head>
 <body>
     <main>
@@ -64,6 +64,6 @@ if(isset($_SESSION["loggedin"])) {
 
 <?php
 } else {
-    header("location: ../login");
+    header("location: ../../login");
 }
 ?>

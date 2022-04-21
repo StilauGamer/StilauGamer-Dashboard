@@ -55,17 +55,18 @@ main {
 }
 
 #main-title {
-    margin: 1%;
-    padding: 3%;
-    font-size: 20px;
+    margin: 2%;
+    padding: 2%;
+    font-size: 150%;
     border-radius: 15px;
     background-color: blue;
     border: 2px solid black;
 }
 
 #main-content {
-    margin: 1%;
+    margin: 2%;
     height: 100%;
+    text-align: center;
     border-radius: 15px;
     background-color: blue;
     border: 2px solid black;
@@ -82,5 +83,8 @@ main {
 
     main {
         height: 75%;
+    }
+    #main-title {
+        text-align: center;
     }
 }

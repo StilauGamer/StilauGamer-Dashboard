@@ -44,7 +44,7 @@ if(!isset($_SESSION["loggedin"])) {
     </nav>
     <main>
         <section id="main-title">
-            main-title
+            <h1>Home</h1>
         </section>
         <section id="main-content">
             main-content

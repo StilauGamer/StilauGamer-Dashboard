@@ -37,17 +37,38 @@ nav {
     min-width: 18%;
     overflow: hidden;
     background: lime;
-    border-radius: 15px;
+    border-radius: 20px;
     border: solid 2px black;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 20px;
     transition: 1s;
     min-width: 75%;
+    overflow: hidden;
     background: lime;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+#main-title {
+    margin: 1%;
+    padding: 3%;
+    font-size: 20px;
     border-radius: 15px;
-    border: solid 2px black;
+    background-color: blue;
+    border: 2px solid black;
+}
+
+#main-content {
+    margin: 1%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: blue;
+    border: 2px solid black;
 }
 
 @media(max-width: 1300px) {

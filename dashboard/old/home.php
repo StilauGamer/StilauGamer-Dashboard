@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "../mysql.php";
+include "../../mysql.php";
 $stmt = $conn->prepare("SELECT * FROM permissions WHERE username=:uname");
 $stmt->bindParam(":uname", $_SESSION["username"]);
 $stmt->execute();
@@ -19,7 +19,7 @@ if ($_SESSION["loggedin"]) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StilauGamer | Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../../css/dashboard/old/dashboard.css">
     
 </head>
 <body>
@@ -52,7 +52,7 @@ if ($_SESSION["loggedin"]) {
 
 <?php
   } else {
-    header("location: ../login");
+    header("location: ../../login");
     exit();
   }
 ?>

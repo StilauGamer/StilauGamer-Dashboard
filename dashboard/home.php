@@ -3,6 +3,9 @@
 session_start();
 include "scripts/nav-script.php";
 
+$_SESSION["pageName"] = basename($_SERVER["PHP_SELF"], ".php");
+$pageName = $_SESSION["pageName"];
+
 if(!isset($_SESSION["loggedin"])) {
     header("location: ../login");
     exit();
@@ -18,6 +21,7 @@ if(!isset($_SESSION["loggedin"])) {
     <title>StilauGamer | Home</title>
     <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard.css">
     <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard-nav.css">
+    <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard-phone.css">
 </head>
 <body>
     <nav>
@@ -26,7 +30,6 @@ if(!isset($_SESSION["loggedin"])) {
             <hr class="underline">
         </section>
         <section id="nav-content">
-
             <?php
             while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 $table_title = $row['title'];
@@ -44,11 +47,31 @@ if(!isset($_SESSION["loggedin"])) {
     </nav>
     <main>
         <section id="main-title">
-            <h1>Home</h1>
+            <h1 class="main-title"><?php echo $pageName?></h1>
+            <div class="dropdown">
+                <button class="dropdown-button"><?php echo $pageName ?></button>
+                <div class="dropdown-content">
+                    <hr class="underline">
+                    <a>Test</a>
+                    <?php
+                    while($row2 = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                        var_dump($row2);
+                        exit();
+                    }
+                    ?>
+                </div>
+            </div>
         </section>
         <section id="main-content">
             <h1>main-content</h1>
         </section>
     </main>
 </body>
+<style>
+<?php
+if ($_SESSION["settings_layout"] == 2) {
+    include("../css/dashboard/layouts/layout2.css");
+}
+?>
+</style>
 </html>

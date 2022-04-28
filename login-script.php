@@ -6,8 +6,8 @@ error_reporting(E_ALL);
 
 include "mysql.php";
 
-$username = $_POST["username"];
-$password = $_POST["password"];
+$username = trim($_POST["username"]);
+$password = trim($_POST["password"]);
 
 # Login
 $stmt = $conn->prepare("SELECT * FROM users WHERE username=:uname");

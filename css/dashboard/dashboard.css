@@ -55,8 +55,10 @@ main {
 }
 
 #main-title {
-    margin: 2%;
-    padding: 2%;
+    overflow: hidden;
+    margin: 2% 2% 0%;
+    padding: 2% 0;
+    height: 55px;
     font-size: 150%;
     border-radius: 15px;
     background-color: blue;
@@ -64,6 +66,7 @@ main {
 }
 
 #main-content {
+    overflow: hidden;
     margin: 2%;
     height: 100%;
     text-align: center;
@@ -72,19 +75,10 @@ main {
     border: 2px solid black;
 }
 
-@media(max-width: 1300px) {
-    body {
-        flex-direction: column;
-    }
+.main-title {
+    padding-left: 2%;
+}
 
-    nav {
-        height: 75%;
-    }
-
-    main {
-        height: 75%;
-    }
-    #main-title {
-        text-align: center;
-    }
+.dropdown {
+    display: none;
 }

@@ -1,0 +1,52 @@
+@media(max-width: 1300px) {
+    body {
+        flex-direction: column;
+    }
+    nav {
+        display: none;
+    }
+    main {
+        height: 100%;
+    }
+    .main-title {
+        display: none;
+    }
+
+    /* Dropdown */
+
+    .dropdown {
+        overflow: hidden;
+        display: block;
+        text-align: center;
+    }
+
+    .underline {
+        border: none;
+        margin-top: 1.5%;
+        border-bottom: solid 2px black;
+    }
+
+    .dropdown-button {
+        border: none;
+        color: white;
+        font-size: 150%;
+        cursor: pointer;
+        background: none;
+        font-weight: bold;
+    }
+
+    .dropdown-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main-title {
+        height: 45px;
+        transition: height 1s;
+    }
+
+    #main-title:hover {
+        height: 125px;
+        transition: height 1s;
+    }
+}

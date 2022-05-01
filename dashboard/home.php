@@ -10,6 +10,20 @@ if(!isset($_SESSION["loggedin"])) {
     header("location: ../login");
     exit();
 }
+
+function navItems($stmt) {
+    $navItems = "";
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $table_title = $row['title'];
+        $table_location = $row['location'];
+        $table_permission = $row['permission'];
+        if ($table_permission == isset($_SESSION[$table_permission])) {
+            $navItems .= "<a href={$table_location}><h1>{$table_title}</h1></a>";
+        } 
+    }
+    return $navItems;
+}
+$navItems = navItems($stmt);
 ?>
 
 <!DOCTYPE html>
@@ -30,15 +44,7 @@ if(!isset($_SESSION["loggedin"])) {
             <hr class="underline">
         </section>
         <section id="nav-content">
-            <?php
-            while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $table_title = $row['title'];
-                $table_location = $row['location'];
-                $table_permission = $row['permission'];
-                if ($table_permission == isset($_SESSION[$table_permission])) {
-            ?>
-            <a href="<?php echo $table_location; ?>"><h1><?php echo $table_title; ?></h1></a>
-            <?php } } ?>
+            <?php echo $navItems; ?>
         </section>
         <section id="nav-footer">
             <hr class="underline">
@@ -52,13 +58,7 @@ if(!isset($_SESSION["loggedin"])) {
                 <button class="dropdown-button"><?php echo $pageName ?></button>
                 <div class="dropdown-content">
                     <hr class="underline">
-                    <a>Test</a>
-                    <?php
-                    while($row2 = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                        var_dump($row2);
-                        exit();
-                    }
-                    ?>
+                    <?php echo $navItems; ?>
                 </div>
             </div>
         </section>

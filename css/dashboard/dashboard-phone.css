@@ -15,7 +15,6 @@
     /* Dropdown */
 
     .dropdown {
-        overflow: hidden;
         display: block;
         text-align: center;
     }
@@ -45,15 +44,5 @@
         transition: 0.5s;
         text-decoration: none;
         list-style-type: none;
-    }
-
-    #main-title {
-        height: 45px;
-        transition: height 1s;
-    }
-
-    #main-title:hover {
-        height: 100%;
-        transition: height 1s;
     }
 }

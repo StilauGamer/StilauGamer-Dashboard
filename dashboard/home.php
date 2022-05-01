@@ -61,6 +61,8 @@ $navItems = navItems($stmt);
                 <div class="dropdown-content">
                     <hr class="underline">
                     <?php echo $navItems; ?>
+                    <hr class="underline">
+                    <h1 href="../logout" class="dropdown-footer">Log Out</a>
                 </div>
             </div>
         </section>

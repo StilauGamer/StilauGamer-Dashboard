@@ -40,9 +40,14 @@
     }
 
     .dropdown-content a {
+        padding: 2% 0;
         color: white;
         transition: 0.5s;
         text-decoration: none;
         list-style-type: none;
+    }
+
+    .dropdown-footer {
+        font-size: 125%;
     }
 }

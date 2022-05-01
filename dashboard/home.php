@@ -36,6 +36,8 @@ $navItems = navItems($stmt);
     <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard.css">
     <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard-nav.css">
     <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard-phone.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../assets/js/dropdown.js"></script>
 </head>
 <body>
     <nav>

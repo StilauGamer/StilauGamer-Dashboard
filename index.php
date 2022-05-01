@@ -47,7 +47,7 @@ session_start();
 
     
     <main>
-        <iframe src="https://discord.com/widget?id=953661103882272858&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        <iframe src="https://discord.com/widget?id=770971963111768075&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </main>
 </body>
 </html>

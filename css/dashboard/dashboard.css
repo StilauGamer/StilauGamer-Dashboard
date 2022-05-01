@@ -55,10 +55,8 @@ main {
 }
 
 #main-title {
-    overflow: hidden;
     margin: 2% 2% 0%;
     padding: 2% 0;
-    height: 55px;
     font-size: 150%;
     border-radius: 15px;
     background-color: blue;

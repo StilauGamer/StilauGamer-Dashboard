@@ -1,5 +1,3 @@
-$(document).ready(function() {
-    $(".dropdown-button").click(function() {
-        $(".dropdown-content").slideToggle("slow");
-    });
-});
+function dropdownFunc() {
+    document.getElementById("main-title").classList.toggle("open");
+}

@@ -12,11 +12,26 @@
         display: none;
     }
 
+    #main-title {
+        height: auto;
+        overflow: hidden;
+        max-height: 40px;
+        transition: max-height 2s cubic-bezier(0, 1, 0, 1);
+    }
+    #main-title.open {
+        max-height: 100%;
+        transition: max-height 2s ease-in-out;
+    }
+
     /* Dropdown */
 
     .dropdown {
         display: block;
         text-align: center;
+    }
+
+    .active {
+        opacity: 0.75;
     }
 
     .underline {
@@ -29,7 +44,6 @@
         border: none;
         color: white;
         font-size: 150%;
-        cursor: pointer;
         background: none;
         font-weight: bold;
     }

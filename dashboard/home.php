@@ -36,7 +36,6 @@ $navItems = navItems($stmt);
     <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard.css">
     <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard-nav.css">
     <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard-phone.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../assets/js/dropdown.js"></script>
 </head>
 <body>
@@ -54,7 +53,7 @@ $navItems = navItems($stmt);
         </section>
     </nav>
     <main>
-        <section id="main-title">
+        <section id="main-title" onClick="dropdownFunc()">
             <h1 class="main-title"><?php echo $pageName?></h1>
             <div class="dropdown">
                 <button class="dropdown-button"><?php echo $pageName ?></button>

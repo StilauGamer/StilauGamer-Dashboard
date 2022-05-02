@@ -16,10 +16,16 @@
         height: auto;
         overflow: hidden;
         max-height: 40px;
+        -webkit-transition: max-height 2s cubic-bezier(0, 1, 0, 1);
+        -moz-transition: max-height 2s cubic-bezier(0, 1, 0, 1);
+        -o-transition: max-height 2s cubic-bezier(0, 1, 0, 1);
         transition: max-height 2s cubic-bezier(0, 1, 0, 1);
     }
     #main-title.open {
         max-height: 100%;
+        -webkit-transition: max-height 2s ease-in-out;
+        -moz-transition: max-height 2s ease-in-out;
+        -o-transition: max-height 2s ease-in-out;
         transition: max-height 2s ease-in-out;
     }
 

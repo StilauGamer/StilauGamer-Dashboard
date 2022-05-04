@@ -37,17 +37,19 @@ $stmt2->bindParam(":id", $db_id);
 $stmt2->execute();
 
 # User Settings
-$stmt3 = $conn->prepare("SELECT * FROM user_settings WHERE id=:id");
-$stmt3->bindParam(":id", $db_id);
-$stmt3->execute();
-$result = $stmt3->fetch();
-$db_layout = $result["layout"];
-if ($result == false) {
-    $stmt4 = $conn->prepare("INSERT INTO user_settings(id, username, layout) VALUES(:id, :username, 1)");
-    $stmt4->bindParam(":id", $db_id);
-    $stmt4->bindParam(":username", $db_username);
-    $stmt4->execute();
-    $db_layout = 1;
+if ($db_id > 1) {
+    $stmt3 = $conn->prepare("SELECT * FROM user_settings WHERE id=:id");
+    $stmt3->bindParam(":id", $db_id);
+    $stmt3->execute();
+    $result = $stmt3->fetch();
+    $db_layout = $result["layout"];
+    if ($result == false) {
+        $stmt4 = $conn->prepare("INSERT INTO user_settings(id, username, layout) VALUES(:id, :username, 1)");
+        $stmt4->bindParam(":id", $db_id);
+        $stmt4->bindParam(":username", $db_username);
+        $stmt4->execute();
+        $db_layout = 1;
+    }
 }
 
 if(strtolower($username) == strtolower($db_username) && $password == $db_password) {

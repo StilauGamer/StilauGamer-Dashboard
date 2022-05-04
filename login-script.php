@@ -17,6 +17,8 @@ $result = $stmt->fetch();
 $db_id = $result["id"];
 $db_username = $result["username"];
 $db_password = $result["password"];
+$db_layout = $result["layout"];
+$db_theme = $result["theme"];
 
 if(empty($username) && empty($password)) {
     header("location: ./login?error=Please enter a username and a password.");
@@ -36,28 +38,13 @@ $stmt2 = $conn->prepare("SELECT * FROM permissions WHERE id=:id");
 $stmt2->bindParam(":id", $db_id);
 $stmt2->execute();
 
-# User Settings
-if ($db_id > 1) {
-    $stmt3 = $conn->prepare("SELECT * FROM user_settings WHERE id=:id");
-    $stmt3->bindParam(":id", $db_id);
-    $stmt3->execute();
-    $result = $stmt3->fetch();
-    $db_layout = $result["layout"];
-    if ($result == false) {
-        $stmt4 = $conn->prepare("INSERT INTO user_settings(id, username, layout) VALUES(:id, :username, 1)");
-        $stmt4->bindParam(":id", $db_id);
-        $stmt4->bindParam(":username", $db_username);
-        $stmt4->execute();
-        $db_layout = 1;
-    }
-}
-
 if(strtolower($username) == strtolower($db_username) && $password == $db_password) {
     session_start();
     $_SESSION["loggedin"] = true;
     $_SESSION["id"] = $db_id;
     $_SESSION["username"] = $db_username;
     $_SESSION["settings_layout"] = $db_layout;
+    $_SESSION["settings_theme"] = $db_theme;
     while($row = $stmt2->fetch(PDO::FETCH_ASSOC)) {
         $columns = array_keys($row, "1");
         foreach ($columns as $key => $value) {

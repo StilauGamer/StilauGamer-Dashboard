@@ -9,6 +9,21 @@ include $_SERVER['DOCUMENT_ROOT']."/mysql.php";
 $stmt = $conn->prepare("SELECT title, location, permission FROM navlist");
 $stmt->execute();
 
-return $stmt;
+function navItems($stmt) {
+    $navItems = "";
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $table_title = $row['title'];
+        $table_location = $row['location'];
+        $table_permission = $row['permission'];
+        if ($table_permission == isset($_SESSION[$table_permission])) {
+            $navItems .= "<a href={$table_location}><h1>{$table_title}</h1></a>";
+        } 
+    }
+    return $navItems;
+}
+
+$navItems = navItems($stmt);
+
+return $navItems;
 
 ?>

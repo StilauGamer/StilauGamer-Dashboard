@@ -41,7 +41,7 @@ $stmt2->execute();
 if(strtolower($username) == strtolower($db_username) && $password == $db_password) {
     session_start();
     $_SESSION["loggedin"] = true;
-    $_SESSION["id"] = $db_id;
+    $_SESSION["user_id"] = $db_id;
     $_SESSION["username"] = $db_username;
     $_SESSION["settings_layout"] = $db_layout;
     $_SESSION["settings_theme"] = $db_theme;

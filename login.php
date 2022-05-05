@@ -19,7 +19,7 @@ if(!isset($_SESSION["loggedin"])) {
             <img src="/assets/img/cloudlockadmin.png" class="lock">
         </section>
         <section class="login">
-            <form action="./login-script.php" method="post" class="login-form">
+            <form action="./login-script-V2.php" method="post" class="login-form">
                 <label>USERNAME</label><br>
                 <input type="text" name="username" placeholder="Name" class="textbox"><br><br><br>
                 <label>PASSWORD</label><br>

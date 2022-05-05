@@ -10,8 +10,6 @@ if(!isset($_SESSION["loggedin"])) {
     exit();
 }
 
-checkPerm($_SESSION["user_id"], 1);
-
 # Updates the DB and tells what page the user is on.
 setCurrentPage($_SESSION["user_id"], getCurrentPage());
 

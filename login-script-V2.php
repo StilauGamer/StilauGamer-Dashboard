@@ -37,13 +37,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["loggedin"] = true;
                 $_SESSION["user_id"] = $result["user_id"];
                 header("location: ./dashboard/home");
+            } else {
+                header("location: ./login?error=Wrong username or password.");
+                exit();
+
             }
         } else {
-            header("location: ./login?error=Invalid username or password.");
+            header("location: ./login?error=Wrong username or password.");
             exit();
         }
     } else {
-        header("location: ./login?error=wrong");
+        header("location: ./login?error=A problem has occured, try again later.");
         exit();
     }
 }

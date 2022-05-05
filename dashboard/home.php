@@ -2,14 +2,19 @@
 
 session_start();
 include_once "scripts/nav-script.php";
+include_once "scripts/currentpage-script.php";
 
-$_SESSION["pageName"] = basename($_SERVER["PHP_SELF"], ".php");
-$pageName = ucfirst($_SESSION["pageName"]);
-
+# Checks if the user is logged in.
 if(!isset($_SESSION["loggedin"])) {
     header("location: ../login");
     exit();
 }
+
+checkPerm($_SESSION["user_id"], 1);
+
+# Updates the DB and tells what page the user is on.
+setCurrentPage($_SESSION["user_id"], getCurrentPage());
+
 ?>
 
 <!DOCTYPE html>
@@ -38,9 +43,9 @@ if(!isset($_SESSION["loggedin"])) {
     </nav>
     <main>
         <section id="main-title">
-            <h1 class="main-title"><?php echo $pageName?></h1>
+            <h1 class="main-title"><?php echo getCurrentPage(); ?></h1>
             <div class="dropdown">
-                <button class="dropdown-button" onclick="dropdownFunc()"><?php echo $pageName ?></button>
+                <button class="dropdown-button" onclick="dropdownFunc()"><?php echo getCurrentPage(); ?></button>
                 <div class="dropdown-content">
                     <?php echo $navItems; ?>
                     <a href="../logout" class="dropdown-footer">Log Out</a>

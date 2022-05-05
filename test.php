@@ -17,6 +17,16 @@
         <a>Notepads</a>
         <a>VS-Code</a>
     </div>
+
+    <form action="test-script.php" method="post">
+        <label>ID</label>
+        <input type="text" name="id">
+        <label>Username</label>
+        <input type="text" name="username">
+        <label>Password</label>
+        <input type="text" name="pass">
+        <button type="submit">Create Account</button>
+    </form>
 </body>
 
 

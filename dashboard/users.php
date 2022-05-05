@@ -2,14 +2,15 @@
 
 session_start();
 include "scripts/nav-script.php";
-
-$_SESSION["pageName"] = basename($_SERVER["PHP_SELF"], ".php");
-$pageName = $_SESSION["pageName"];
+include "scripts/currentpage-script.php";
 
 if(!isset($_SESSION["loggedin"])) {
     header("location: ../login");
     exit();
 }
+
+# Updates the DB and tells what page the user is on.
+setCurrentPage($_SESSION["user_id"], getCurrentPage());
 ?>
 
 <!DOCTYPE html>

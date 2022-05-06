@@ -16,4 +16,60 @@ function setCurrentPage($user_id, $page) {
     $stmt->bindParam(":user_id", $user_id);
     $stmt->execute();
 }
+
+
+function getThemeColor($themeid, $colorName, $type) {
+    # IF STATEMENTS
+    # QUERY ETTER COLOR THEME ETTER ID
+    # SJEKKER ROWS
+    # FETCHER COLORSA
+    # RETURNER FARGEN
+    include $_SERVER['DOCUMENT_ROOT']."/mysql.php";
+    if (!$type == "rgb") {
+        if ($stmt = $conn->prepare("SELECT * FROM themes WHERE theme_id=:theme_id")) {
+            $stmt->bindParam(":theme_id", $themeid);
+            $stmt->execute();
+            $result = $stmt->fetch();
+            switch ($colorName) {
+                case "background-color":
+                    return $result["background-color"];
+                    break;
+                case "main-color":
+                    return $result["main-color"];
+                    break;
+                case "box-color":
+                    return $result["box-color"];
+                    break;
+                case "text-color":
+                    return $result["text-color"];
+                    break;
+                default:
+                    return "#FFFFFF";
+                    break;
+            }
+        }
+    }
+    if ($stmt = $conn->prepare("SELECT * FROM themes WHERE theme_id=:theme_id")) {
+        $stmt->bindParam(":theme_id", $themeid);
+        $stmt->execute();
+        $result = $stmt->fetch();
+        switch ($colorName) {
+            case "background-color":
+                return $result["background-color"];
+                break;
+            case "main-color":
+                return $result["main-color"];
+                break;
+            case "box-color":
+                return $result["box-color"];
+                break;
+            case "text-color":
+                return $result["text-color"];
+                break;
+            default:
+                return "#FFFFFF";
+                break;
+        }
+    }
+}
 ?>

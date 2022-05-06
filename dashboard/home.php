@@ -12,6 +12,9 @@ if(!isset($_SESSION["loggedin"])) {
 
 # Updates the DB and tells what page the user is on.
 setCurrentPage($_SESSION["user_id"], getCurrentPage());
+$backgroundColor = getThemeColor($_SESSION["settings_theme"], "background-color", null);
+$mainColor = getThemeColor($_SESSION["settings_theme"], "main-color", null);
+$boxColor = getThemeColor($_SESSION["settings_theme"], "box-color", null);
 
 ?>
 
@@ -61,5 +64,36 @@ if ($_SESSION["settings_layout"] == 2) {
     include_once("../css/dashboard/layouts/layout2.css");
 }
 ?>
+
+body {
+    background: <?php echo $backgroundColor ?>;
+}
+nav {
+    background: <?php echo $mainColor ?>;
+}
+main {
+    background: <?php echo $mainColor ?>;
+}
+#nav-title {
+    background: <?php echo $boxColor ?>;
+}
+#nav-footer {
+    background: <?php echo $boxColor ?>;
+}
+#nav-content a:hover {
+    background: <?php echo $backgroundColor ?>;
+}
+#main-title {
+    background: <?php echo $boxColor ?>;
+}
+#main-content {
+    background: <?php echo $boxColor ?>;
+}
+.dropdown-content {
+    background: <?php echo $backgroundColor ?>;
+}
+.dropdown-content a:hover {
+    background: <?php echo $backgroundColor ?>;
+}
 </style>
 </html>

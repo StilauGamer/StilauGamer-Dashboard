@@ -7,7 +7,7 @@
 }
 
 html {
-    background: url("../../assets/img/background-2.jpg") no-repeat center center fixed;
+    background: url("../../assets/img/background-4.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -27,14 +27,12 @@ body {
     position: absolute;
     border-radius: 25px;
     inset: 10% 10% 10% 10%;
-    background: rgba(39, 63, 79, 0.85);
 }
 
 nav {
     margin: 20px;
     min-width: 18%;
     overflow: hidden;
-    background: rgb(48, 98, 125);
     border-radius: 20px;
     
 }
@@ -46,7 +44,6 @@ main {
     margin: 20px;
     min-width: 75%;
     overflow: hidden;
-    background: rgb(48, 98, 125);
     border-radius: 20px;
     
 }
@@ -55,7 +52,6 @@ main {
     margin: 2% 2% 0%;
     font-size: 150%;
     border-radius: 15px;
-    background-color: rgb(43, 138, 180);
 }
 
 @media(min-width: 1300px) {
@@ -71,7 +67,6 @@ main {
     overflow: hidden;
     text-align: center;
     border-radius: 15px;
-    background-color: rgb(43, 138, 180);
 }
 
 .main-title {

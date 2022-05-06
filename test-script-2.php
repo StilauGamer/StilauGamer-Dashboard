@@ -18,5 +18,6 @@ $stmt->bindParam(":layout", $layout);
 $stmt->execute();
 $_SESSION["settings_layout"] = $layout;
 $_SESSION["settings_theme"] = $theme;
+header("location: ./test");
 
 ?>

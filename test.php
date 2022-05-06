@@ -1,3 +1,15 @@
+<?php
+
+# Starts a session.
+session_start();
+
+# Checks if the user is logged in.
+if(!isset($_SESSION["loggedin"])) {
+    header("location: ../login");
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +38,15 @@
         <label>Password</label>
         <input type="text" name="pass">
         <button type="submit">Create Account</button>
+    </form>
+    <form action="test-script-2.php" method="post">
+        <label>ID</label>
+        <input type="text" name="id">
+        <label>Theme</label>
+        <input type="text" name="theme">
+        <label>Layout</label>
+        <input type="text" name="layout">
+        <button type="submit">Update user</button>
     </form>
 </body>
 

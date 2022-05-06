@@ -36,6 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 session_start();
                 $_SESSION["loggedin"] = true;
                 $_SESSION["user_id"] = $result["user_id"];
+                $_SESSION["settings_theme"] = $result["theme"];
+                $_SESSION["settings_layout"] = $result["layout"];
                 header("location: ./dashboard/home");
             } else {
                 header("location: ./login?error=Wrong username or password.");

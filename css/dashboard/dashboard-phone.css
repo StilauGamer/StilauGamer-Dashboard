@@ -23,10 +23,14 @@
     }
     #main-title.open {
         max-height: 100%;
+        overflow-y: scroll;
         -webkit-transition: max-height 2s ease-in-out;
         -moz-transition: max-height 2s ease-in-out;
         -o-transition: max-height 2s ease-in-out;
         transition: max-height 2s ease-in-out;
+    }
+    #main-title.open::-webkit-scrollbar {
+        display: none;
     }
 
     /* Dropdown */
@@ -45,7 +49,6 @@
         background: none;
         font-size: 150%;
         font-weight: bold;
-        border-bottom: 1px solid gray;
     }
 
     .dropdown-content {

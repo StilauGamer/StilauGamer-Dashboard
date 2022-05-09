@@ -1,13 +1,6 @@
 <?php
 session_start();
 
-include "../../mysql.php";
-$stmt = $conn->prepare("SELECT * FROM permissions WHERE username=:uname");
-$stmt->bindParam(":uname", $_SESSION["username"]);
-$stmt->execute();
-$result = $stmt->fetch();
-$db_txadmin = $result["txAdmin"];
-
 // Is the player logged in?
 if ($_SESSION["loggedin"]) {
 ?>
@@ -31,9 +24,7 @@ if ($_SESSION["loggedin"]) {
             <div class="nav-content">
                 <a href="/dashboard/users" class="underline">Users</a>
                 <a href="/dashboard/permissions" class="underline">Permissions</a>
-                <?php if($db_txadmin == 1) {?>
                 <a href="https://txadmin.stilaugamer.com" class="underline">txAdmin</a>
-                <?php } ?>
             </div>
             <div class="nav-footer">
                 <hr class="footer-underline">

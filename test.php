@@ -1,11 +1,23 @@
 <?php
 
+# Checking for errors
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+include "dashboard/scripts/permission-script.php";
+
 # Starts a session.
 session_start();
 
 # Checks if the user is logged in.
 if(!isset($_SESSION["loggedin"])) {
-    header("location: ../login");
+    header("location: ./login");
+    exit();
+}
+
+if(!checkPerm($_SESSION["user_id"], getPermId("viewTestPage"))) {
+    header("location: ./dashboard/home");
     exit();
 }
 

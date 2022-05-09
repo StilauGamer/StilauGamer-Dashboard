@@ -1,9 +1,25 @@
 /* Main Stuff */
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Oswald', sans-serif;
     padding: 0;
     margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    overflow: hidden;
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
 }
 
 html {
@@ -23,26 +39,25 @@ body {
     display: flex;
     justify-content: space-between;
     color: white;
-    overflow: hidden;
     position: absolute;
     border-radius: 25px;
-    inset: 10% 10% 10% 10%;
+    inset: 10%;
 }
 
 nav {
-    margin: 20px;
-    min-width: 18%;
+    margin: 1.5%;
+    margin-right: 0;
+    flex-grow: 1;
     overflow: hidden;
     border-radius: 20px;
-    
 }
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px;
-    min-width: 75%;
+    flex-grow: 9;
+    margin: 1.5%;
     overflow: hidden;
     border-radius: 20px;
     

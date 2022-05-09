@@ -15,8 +15,11 @@ function navItems($stmt) {
         $table_title = $row['title'];
         $table_location = $row['location'];
         $table_permission = $row['permission'];
+        if ($table_permission == null) {
+            $navItems .= "<a href={$table_location}>{$table_title}</a>";
+        }
         if (checkPerm($_SESSION["user_id"], getPermId($table_permission))) {
-            $navItems .= "<a href={$table_location}><h1>{$table_title}</h1></a>";
+            $navItems .= "<a href={$table_location}>{$table_title}</a>";
         } 
     }
     return $navItems;

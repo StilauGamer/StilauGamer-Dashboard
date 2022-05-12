@@ -1,6 +1,7 @@
 <?php 
-session_start();
-if(!isset($_SESSION["loggedin"])) {
+if(isset($_COOKIE["login_token"])) {
+    header("location: ./dashboard/home");
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,10 +36,3 @@ if(!isset($_SESSION["loggedin"])) {
     </main>
 </body>
 </html>
-
-<?php
-} else {
-    header("location: ./dashboard/home");
-    exit();
-}
-?>

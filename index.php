@@ -1,5 +1,5 @@
 <?php
-session_start();
+include_once "dashboard/scripts/checkUser-script.php";
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ session_start();
                     <a href="/">TEST</a>
                 </li>
                 <li>
-                    <?php if(isset($_SESSION["loggedin"])) {?>
+                    <?php if(loggedIn()) {?>
                     <div class="dropdown" style="float: right;">
                         <button class="dropdown-button">ACCOUNT</button>
                         <div class="dropdown-content">

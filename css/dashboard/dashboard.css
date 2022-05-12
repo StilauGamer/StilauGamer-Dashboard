@@ -30,15 +30,12 @@ html {
     background-size: cover;
 
     display: flex;
-    min-height: 100vh;
     justify-content: center;
-    align-items: center;
 }
 
-body {
+#dashboard {
     display: flex;
     justify-content: space-between;
-    color: white;
     position: absolute;
     border-radius: 25px;
     inset: 10%;
@@ -90,4 +87,32 @@ main {
 
 .dropdown {
     display: none;
+}
+
+/* Error Styling */
+#error {
+    display: grid;
+    align-items: space-between;
+    grid-template-areas: 
+      'title title title title close'
+      'content content content content content';
+    height: 85px;
+    width: 450px;
+    text-align: center;
+    border-radius: 25px;
+}
+.grid-title {
+    grid-area: title;
+}
+.grid-close {
+    grid-area: close;
+    text-decoration: none;
+}
+.grid-content {
+    grid-area: content;
+}
+@media(max-width: 1300px) {
+    #error {
+        display: none;
+    }
 }

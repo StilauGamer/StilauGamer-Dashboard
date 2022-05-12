@@ -38,7 +38,7 @@ if (!isset($_COOKIE["login_token"])) {
                 $result = $stmt->fetch();
                 $hashed_password = trim($result["hashed_password"]);
                 if (password_verify($password, $hashed_password)) {
-                    $hashed_token = md5(sha1($result["user_id"] . $hashed_password));
+                    $hashed_token = hash("sha512", $result["username"] . time() . "RANDOMSALT");
                     setcookie("login_token", $hashed_token, time() + 86400);
                     saveCookieDb($result["user_id"], $hashed_token);
                     header("location: ./dashboard/home");

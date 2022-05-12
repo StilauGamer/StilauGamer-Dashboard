@@ -7,6 +7,7 @@ include_once $_SERVER['DOCUMENT_ROOT']."/mysql.php";
 include_once "permission-script.php";
 include_once "currentpage-script.php";
 include_once "checkUser-script.php";
+$userInfo = getUserInfo();
 
 $stmt = $conn->prepare("SELECT title, location, permission FROM navlist");
 $stmt->execute();

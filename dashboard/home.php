@@ -4,7 +4,11 @@ include_once "scripts/theme-script.php";
 include_once "scripts/currentpage-script.php";
 
 # Checks if the user is logged in.
-include_once "scripts/checkUser-script.php";
+if (!loggedIn()) {
+    header("location: ../login");
+    exit();
+}
+$userInfo = getUserInfo();
 
 # Updates the DB and tells what page the user is on.
 setCurrentPage($userInfo["user_id"], getCurrentPage());

@@ -1,6 +1,8 @@
 <?php
 
-log("Hello");
+include_once "./dashboard/scripts/checkUser-script.php";
+$userInfo = test();
+var_dump($userInfo);
 exit();
 
 # Checking for errors

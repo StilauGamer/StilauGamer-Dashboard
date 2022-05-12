@@ -1,7 +1,8 @@
 <?php
-session_start();
-include "dashboard/scripts/currentpage-script.php";
-setCurrentPage($_SESSION["user_id"], null);
-session_destroy();
+include "mysql.php";
+$stmt = $conn->prepare("DELETE FROM sessions WHERE hashed_token=:hashed_token");
+$stmt->bindParam(":hashed_token", $_COOKIE["login_token"]);
+$stmt->execute();
+setcookie("login_token", "", time() - 3600);
 header("location: /");
 ?>

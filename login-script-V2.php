@@ -3,6 +3,8 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+date_default_timezone_set('Europe/Oslo');
+include_once "mysql.php";
 
 $username = trim($_POST["username"]);
 $password = trim($_POST["password"]);
@@ -15,8 +17,6 @@ if (isset($_COOKIE["login_token"])) {
 # No Cookie
 if (!isset($_COOKIE["login_token"])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        include_once "mysql.php";
-
         if (empty($username) && empty($password)) {
             header("location: ./login?error=Please enter a username and a password.");
             exit();
@@ -39,7 +39,7 @@ if (!isset($_COOKIE["login_token"])) {
                 $hashed_password = trim($result["hashed_password"]);
                 if (password_verify($password, $hashed_password)) {
                     $hashed_token = hash("sha512", $result["username"] . time() . "RANDOMSALT");
-                    setcookie("login_token", $hashed_token, time() + 86400);
+                    setcookie("login_token", $hashed_token, time() + 300);
                     saveCookieDb($result["user_id"], $hashed_token);
                     header("location: ./dashboard/home");
                 } else {
@@ -60,9 +60,10 @@ if (!isset($_COOKIE["login_token"])) {
 
 function saveCookieDb($user_id, $hashed_token) {
     include "mysql.php";
-    $stmt = $conn->prepare("INSERT INTO sessions VALUES(:user_id, :hashed_token)");
+    $stmt = $conn->prepare("INSERT INTO sessions(user_id, hashed_token, sessionEnd) VALUES(:user_id, :hashed_token, :sessionEnd)");
     $stmt->bindParam(":user_id", $user_id);
     $stmt->bindParam(":hashed_token", $hashed_token);
+    $stmt->bindParam(":sessionEnd", date('Y-m-d H:i:s', time() + 300));
     $stmt->execute();
 }
 

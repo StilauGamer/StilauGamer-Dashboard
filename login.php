@@ -2,6 +2,7 @@
 if(isset($_COOKIE["login_token"])) {
     header("location: ./dashboard/home");
 }
+include "dashboard/scripts/currentpage-script.php";
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +14,12 @@ if(isset($_COOKIE["login_token"])) {
     <title>StilauGamer | Login</title>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <script src="https://kit.fontawesome.com/42811d1e0a.js" crossorigin="anonymous"></script>
+
+    <!-- Discord -->
+    <meta content="StilauGamer | <?php echo getCurrentPage() ?>" property="og:title" />
+    <meta content="StilauGamers Login" property="og:description" />
+    <meta content="xampp.stilaugamer.com/login" property="og:url" />
+    <meta content="#FFFFFF" data-react-helmet="true" name="theme-color" />
 </head>
 <body>
     <main>

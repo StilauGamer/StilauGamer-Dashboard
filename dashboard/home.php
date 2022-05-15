@@ -8,7 +8,7 @@ if (!loggedIn()) {
     header("location: ../login");
     exit();
 }
-$userInfo = getUserInfo();
+$userInfo = getUserInfo(getUserId());
 
 # Updates the DB and tells what page the user is on.
 setCurrentPage($userInfo["user_id"], getCurrentPage());
@@ -35,6 +35,12 @@ $lineColor = getThemeColor($userInfo["settings_theme"], "line-color", null);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- Discord -->
+    <meta content="StilauGamer | <?php echo getCurrentPage() ?>" property="og:title" />
+    <meta content="StilauGamers Dashboard" property="og:description" />
+    <meta content="xampp.stilaugamer.com/dashboard/home" property="og:url" />
+    <meta content="#FFFFFF" data-react-helmet="true" name="theme-color" />
 </head>
 <body>
     <?php if (isset($_GET["error-title"])) { ?>
@@ -110,6 +116,9 @@ main {
 }
 #nav-title a {
     color: <?php echo $textColor ?>;
+}
+#nav-title a:hover {
+    color: <?php echo $backgroundColor ?>;
 }
 #nav-footer {
     background: <?php echo $boxColor ?>;

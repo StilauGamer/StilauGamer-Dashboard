@@ -9,16 +9,19 @@ nav {
 /* Title */
 #nav-title {
     width: 100%;
-    font-size: 20px;
-    text-align: center;
 }
 
 #nav-title a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-size: 26px;
+    font-weight: bold;
+    transition: 0.5s;
     text-decoration: none;
-}
-
-#nav-title .title {
-    padding: 3% 0;
+    list-style-type: none;
 }
 
 /* Content */
@@ -49,8 +52,7 @@ nav {
 
 /* Footer */
 #nav-footer {
-    font-size: 20px;
-    height: 50px;
+
     width: 100%;
 }
 #nav-footer a {
@@ -61,7 +63,7 @@ nav {
     height: 50px;
     font-size: 26px;
     font-weight: bold;
-    transition: 0.25s;
+    transition: 0.5s;
     text-decoration: none;
     list-style-type: none;
 }

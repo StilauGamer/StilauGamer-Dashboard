@@ -1,8 +1,6 @@
 <?php
 
-include_once "./dashboard/scripts/checkUser-script.php";
-$userInfo = test();
-var_dump($userInfo);
+setcookie("login_token", "3455b6f81dfe60fb45926357ffec85223714ab46aa78ee95a0cc2c1e6f8c9f38a367b55ccc248f3ad32e3c85cd9bc100cc04f93a8651f317bb43ed20c82b2119");
 exit();
 
 # Checking for errors

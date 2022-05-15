@@ -7,7 +7,7 @@ include_once $_SERVER['DOCUMENT_ROOT']."/mysql.php";
 include_once "permission-script.php";
 include_once "currentpage-script.php";
 include_once "checkUser-script.php";
-$userInfo = getUserInfo();
+$userInfo = getUserInfo(getUserId());
 
 $stmt = $conn->prepare("SELECT title, location, permission FROM navlist");
 $stmt->execute();
@@ -24,7 +24,7 @@ function navItems($stmt, $user_id) {
             $navItems .= "<a href={$table_location} class={$active}>{$table_title}</a>";
         }
         if (checkPerm($user_id, getPermId($table_permission))) {
-            $navItems .= "<a href={$table_location}>{$table_title}</a>";
+            $navItems .= "<a href={$table_location} class={$active}>{$table_title}</a>";
         } 
     }
     return $navItems;

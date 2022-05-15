@@ -8,6 +8,7 @@ error_reporting(E_ALL);
 include "dashboard/scripts/permission-script.php";
 include "./mysql.php";
 include "./dashboard/scripts/checkUser-script.php";
+$userInfo = getUserInfo(getUserId());
 
 if(!checkPerm($userInfo["user_id"], getPermId("viewTestPage"))) {
     header("location: ./dashboard/home");

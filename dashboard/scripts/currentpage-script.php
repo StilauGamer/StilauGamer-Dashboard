@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 function getCurrentPage() {
     $currentPage = ucfirst(basename($_SERVER["PHP_SELF"], ".php"));
+    $currentPage = preg_replace('/(?<!\ )[A-Z]/', ' $0', $currentPage);
     return $currentPage;
 }
 

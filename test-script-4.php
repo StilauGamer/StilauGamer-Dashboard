@@ -2,7 +2,6 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-session_start();
 
 $id = $_POST["id"];
 $username = $_POST["username"];
@@ -16,8 +15,6 @@ $stmt->bindParam(":username", $username);
 $stmt->bindParam(":theme", $theme);
 $stmt->bindParam(":layout", $layout);
 $stmt->execute();
-$_SESSION["settings_layout"] = $layout;
-$_SESSION["settings_theme"] = $theme;
 header("location: ./test");
 
 ?>

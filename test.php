@@ -29,7 +29,6 @@ $stmt->execute();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Simen</h1>
     <div id="nav-title">Nav-Title</div>
     <div id="nav-content">
         <a>Home</a>

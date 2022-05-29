@@ -16,7 +16,7 @@ include_once "dashboard/scripts/checkUser-script.php";
 <body>
     <header>
         <div id="navbar" class="nav-scroll">
-            <h2><a href="/">STILAUGAMER</a></h2>
+            <h2><a href="/">NETTSIDENAVN</a></h2>
             <ul>
                 <li>
                     <a href="/" class="nav-active">HOME</a>
@@ -40,14 +40,15 @@ include_once "dashboard/scripts/checkUser-script.php";
             </ul>
         </div>
         <section class="header-title">
-            <h1>StilauGamer</h1>
-            <h5>Programmer & Gamer</h5>
+            <h1>Nettside</h1>
+            <h5>________________</h5>
         </section>
     </header>
 
     
     <main>
         <iframe src="https://discord.com/widget?id=770971963111768075&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        <iframe src="https://funhtml5games.com?embed=angrybirds" style="width:1800px;height:900px;border:none;" frameborder="0" scrolling="no"></iframe>
     </main>
 </body>
 </html>

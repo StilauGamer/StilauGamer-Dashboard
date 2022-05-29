@@ -43,6 +43,8 @@ $stmt->execute();
         <input type="text" name="id">
         <label>Username</label>
         <input type="text" name="username">
+        <label>Email</label>
+        <input type="text" name="email">
         <label>Password</label>
         <input type="text" name="pass">
         <button type="submit">Create Account</button>

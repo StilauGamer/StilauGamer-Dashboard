@@ -3,6 +3,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 200px;
 }
 
 
@@ -52,7 +53,6 @@ nav {
 
 /* Footer */
 #nav-footer {
-
     width: 100%;
 }
 #nav-footer a {

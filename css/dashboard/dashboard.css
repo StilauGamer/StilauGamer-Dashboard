@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -28,12 +29,9 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
-    display: flex;
-    justify-content: center;
 }
 
-#dashboard {
+body {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -42,6 +40,7 @@ html {
 }
 
 nav {
+    max-width: 250px;
     margin: 1.5%;
     margin-right: 0;
     flex-grow: 1;
@@ -57,7 +56,6 @@ main {
     margin: 1.5%;
     overflow: hidden;
     border-radius: 20px;
-    
 }
 
 #main-title {
@@ -76,6 +74,7 @@ main {
     margin: 2%;
     flex-grow: 1;
     height: auto;
+    width: auto;
     overflow: hidden;
     text-align: center;
     border-radius: 15px;
@@ -87,32 +86,4 @@ main {
 
 .dropdown {
     display: none;
-}
-
-/* Error Styling */
-#error {
-    display: grid;
-    align-items: space-between;
-    grid-template-areas: 
-      'title title title title close'
-      'content content content content content';
-    height: 85px;
-    width: 450px;
-    text-align: center;
-    border-radius: 25px;
-}
-.grid-title {
-    grid-area: title;
-}
-.grid-close {
-    grid-area: close;
-    text-decoration: none;
-}
-.grid-content {
-    grid-area: content;
-}
-@media(max-width: 1300px) {
-    #error {
-        display: none;
-    }
 }

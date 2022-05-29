@@ -1,0 +1,26 @@
+/* Users Table Grid */
+#grid-container {
+    display: grid;
+    grid-template-columns: 50px auto auto 150px;
+    overflow: hidden;
+}
+.grid-item:nth-child(-n+4) {
+    font-size: 20px;
+    font-weight: bold;
+}
+.grid-item {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 50px;
+    font-size: 17px;
+}
+.grid-item>button {
+    border: none;
+    border-radius: 10px;
+    background: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 17px;
+    padding: 5px 15px;
+}

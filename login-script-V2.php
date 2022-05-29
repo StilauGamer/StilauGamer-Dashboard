@@ -30,7 +30,7 @@ if (!isset($_COOKIE["login_token"])) {
             exit();
         }
 
-        if ($stmt = $conn->prepare("SELECT * FROM users WHERE username=:uname")) {
+        if ($stmt = $conn->prepare("SELECT * FROM users WHERE username=:uname OR email=:uname")) {
             $stmt->bindParam(":uname", $username);
             $stmt->execute();
             $rowCount = $stmt->rowCount();
@@ -39,13 +39,12 @@ if (!isset($_COOKIE["login_token"])) {
                 $hashed_password = trim($result["hashed_password"]);
                 if (password_verify($password, $hashed_password)) {
                     $hashed_token = hash("sha512", $result["username"] . time() . "RANDOMSALT");
-                    setcookie("login_token", $hashed_token, time() + 300);
+                    setcookie("login_token", $hashed_token, time() + 900);
                     saveCookieDb($result["user_id"], $hashed_token);
                     header("location: ./dashboard/home");
                 } else {
                     header("location: ./login?error=Wrong username or password.");
                     exit();
-
                 }
             } else {
                 header("location: ./login?error=Wrong username or password.");
@@ -63,7 +62,7 @@ function saveCookieDb($user_id, $hashed_token) {
     $stmt = $conn->prepare("INSERT INTO sessions(user_id, hashed_token, sessionEnd) VALUES(:user_id, :hashed_token, :sessionEnd)");
     $stmt->bindParam(":user_id", $user_id);
     $stmt->bindParam(":hashed_token", $hashed_token);
-    $stmt->bindParam(":sessionEnd", date('Y-m-d H:i:s', time() + 300));
+    $stmt->bindParam(":sessionEnd", date('Y-m-d H:i:s', time() + 900));
     $stmt->execute();
 }
 

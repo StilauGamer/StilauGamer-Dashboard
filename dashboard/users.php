@@ -81,9 +81,9 @@ $lineColor = getThemeColor($userInfo["settings_theme"], "line-color");
                 <div class="grid-item">Options</div>
                 <!-- Users -->
                 <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-                    <div class="grid-item"><?php echo $row["user_id"] ?></div>
-                    <div class="grid-item"><?php echo $row["username"] ?></div>
-                    <div class="grid-item"><?php echo $row["email"] ?></div>
+                    <div class="grid-item"><?= $row["user_id"] ?></div>
+                    <div class="grid-item"><?= $row["username"] ?></div>
+                    <div class="grid-item"><?= $row["email"] ?></div>
                     <div class="grid-item"><button>Edit</button></div>
                 <?php } ?>
             </section>
@@ -161,6 +161,9 @@ main {
 }
 .dropdown-footer:hover {
     color: <?php echo $backgroundColor ?>;
+}
+.grid-item:not(:nth-last-child(-n+4)) {
+    border-bottom: 1px solid <?php echo $mainColor ?>;
 }
 .grid-item:nth-child(-n+4) {
     background: <?php echo $boxColor ?>;

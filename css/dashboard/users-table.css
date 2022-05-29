@@ -1,8 +1,13 @@
 /* Users Table Grid */
+#main-content {
+    overflow: scroll;
+}
+#main-content::-webkit-scrollbar {
+    display: none;
+}
 #grid-container {
     display: grid;
     grid-template-columns: 50px auto auto 150px;
-    overflow: hidden;
 }
 .grid-item:nth-child(-n+4) {
     font-size: 20px;

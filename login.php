@@ -29,7 +29,7 @@ include "dashboard/scripts/currentpage-script.php";
         <section class="login">
             <form action="./login-script-V2.php" method="post" class="login-form">
                 <label>USERNAME</label><br>
-                <input type="text" name="username" placeholder="Name" class="textbox"><br><br><br>
+                <input type="text" name="username" placeholder="Username or Email" class="textbox"><br><br><br>
                 <label>PASSWORD</label><br>
                 <input type="password" name="password" placeholder="Password" class="textbox"><br><br><br>
                 <button type="submit" class="button">Login</button>

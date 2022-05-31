@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 1500px;
+    background-color: rgb(35, 39, 42);
+}
+
+
+/* Scrollbar */
+.nav-scroll {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 1em;
+    transition: 0.5s;
+}
+
+.nav-scroll.scrolled {
+    background-color: rgba(35, 39, 42, 0.75);
+}
+
+
+/* Header */
+header .header-title {
+    background: url("../assets/img/banner.png") no-repeat center;
+    background-size: cover;
+    padding: 250px;
+    text-align: center;
+    color: rgb(161, 52, 211);
+    font-size: 35px;
+}
+
+header h5 {
+  color: white;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+}

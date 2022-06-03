@@ -121,7 +121,7 @@ class rcmail_oauth
     public function get_redirect_uri()
     {
         // rewrite redirect URL to not contain query parameters because some providers do not support this
-        return preg_replace('/\/?\?_task=[a-z]+/', '/index.php/login/oauth', $this->rcmail->url([], true, true));
+        return preg_replace('/\/?\?_task=[a-z]+/', '/index.blade.php/login/oauth', $this->rcmail->url([], true, true));
     }
 
     /**

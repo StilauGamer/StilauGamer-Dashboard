@@ -45,7 +45,7 @@ class rcmail_action_login_oauth extends rcmail_action
                 // use access_token and user info for IMAP login
                 $storage_host = $rcmail->autoselect_host();
                 if ($rcmail->login($auth['username'], $auth['authorization'], $storage_host, true)) {
-                    // replicate post-login tasks from index.php
+                    // replicate post-login tasks from index.blade.php
                     $rcmail->session->remove('temp');
                     $rcmail->session->regenerate_id(false);
 

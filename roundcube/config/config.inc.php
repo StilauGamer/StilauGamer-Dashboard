@@ -33,7 +33,7 @@ $config['db_dsnw'] = 'mysql://stil_roundcube:Lauvdal123@web.stilaugamer.com/stil
 // For example %n = mail.domain.tld, %t = domain.tld
 // WARNING: After hostname change update of mail_host column in users table is
 //          required to match old user data records with the new host.
-$config['default_host'] = NULL;
+$config['default_host'] = 'ssl://mail.stilaugamer.com';
 
 // TCP port used for IMAP connections
 $config['default_port'] = 993;
@@ -53,10 +53,10 @@ $config['default_port'] = 993;
 // For example %n = mail.domain.tld, %t = domain.tld
 // To specify different SMTP servers for different IMAP hosts provide an array
 // of IMAP host (no prefix or port) and SMTP server e.g. ['imap.example.com' => 'smtp.example.net']
-$config['smtp_server'] = 'ssl://smtp.gmail.com';
+$config['smtp_server'] = 'ssl://mail.stilaugamer.com';
 
 // SMTP port. Use 25 for cleartext, 465 for Implicit TLS, or 587 for STARTTLS (default)
-$config['smtp_port'] = 465;
+$config['smtp_port'] = 587;
 
 // provide an URL where a user can get support for this Roundcube installation
 // PLEASE DO NOT LINK TO THE ROUNDCUBE.NET WEBSITE HERE!
@@ -78,7 +78,7 @@ $config['des_key'] = 'eR8SSVU1HWJio9P7BX9s6ZuU';
 // %d - domain (http hostname $_SERVER['HTTP_HOST'] without the first part)
 // %z - IMAP domain (IMAP hostname without the first part)
 // For example %n = mail.domain.tld, %t = domain.tld
-$config['username_domain'] = 'gmail.com';
+$config['username_domain'] = 'stilaugamer.com';
 
 // Name your service. This is displayed on the login screen and in the window title
 $config['product_name'] = 'StilauGamer Webmail';

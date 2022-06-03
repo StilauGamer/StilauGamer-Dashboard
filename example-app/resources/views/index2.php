@@ -20,10 +20,10 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="index.php"></a>
-          <a class="navbar-brand" href="index.php"> <img src="/assets/img/cloudlock.png" width="50" height="35" class="d-inline-block align-midt iz" alt=""></a>
+          <a class="navbar-brand" href="index.blade.php"></a>
+          <a class="navbar-brand" href="index.blade.php"> <img src="/assets/img/cloudlock.png" width="50" height="35" class="d-inline-block align-midt iz" alt=""></a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <a class="navbar-brand main-nav" href="index.php">Stilau / Adrian</a>
+          <a class="navbar-brand main-nav" href="index.blade.php">Stilau / Adrian</a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
@@ -32,7 +32,7 @@
                 <a class="nav-link dropdown-toggle" href="produkts.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Projects
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">    
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               </style>
                 <li><a class="dropdown-item " href="http://txadmin.stilaugamer.com/">Tx Admin</a></li>
                 <li><a class="dropdown-item" href="ram.html">Project 2</a></li>
@@ -55,10 +55,10 @@
         </li>
           <li class="nav-item active">
             <a class="nav-link" href="Contact.html">Contact Us</a>
-          </li> 
+          </li>
           <li class="nav-item active loginmove">
             <a class="nav-link " href="login.php">Log Inn</a>
-          </li> 
+          </li>
         </li>
         </ul>
       </div>

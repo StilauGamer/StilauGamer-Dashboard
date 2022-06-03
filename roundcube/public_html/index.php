@@ -22,5 +22,5 @@
 
 define('INSTALL_PATH', realpath(__DIR__ . '/..') . '/');
 
-// include index.php from application root directory
+// include index.blade.php from application root directory
 include INSTALL_PATH . 'index.php';

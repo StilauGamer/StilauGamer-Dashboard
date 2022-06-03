@@ -15,7 +15,7 @@
 */
 
 if (!class_exists('rcmail_install', false) || !isset($RCI)) {
-    die("Not allowed! Please open installer/index.php instead.");
+    die("Not allowed! Please open installer/index.blade.php instead.");
 }
 
 $required_php_exts = [

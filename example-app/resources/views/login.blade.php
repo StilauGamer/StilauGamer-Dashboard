@@ -1,7 +1,4 @@
-<?php 
-if(isset($_COOKIE["login_token"])) {
-    header("location: ./dashboard/home");
-}
+<?php
 include "dashboard/scripts/currentpage-script.php";
 ?>
 
@@ -27,7 +24,7 @@ include "dashboard/scripts/currentpage-script.php";
             <img src="/assets/img/cloudlockadmin.png" class="lock">
         </section>
         <section class="login">
-            <form action="./login-script-V2.php" method="POST" class="login-form">
+            <form action="/login" method="POST" class="login-form">
                 @csrf
                 <label>USERNAME</label><br>
                 <input type="text" name="username" placeholder="Username or Email" class="textbox"><br><br><br>

@@ -44,17 +44,6 @@ return [
         ],
 
         'mysql' => [
-            'host' => 'web.stilaugamer.com',
-            'sticky' => true,
-            'driver' => 'mysql',
-            'database' => 'stil_stilauweb',
-            'username' => 'stil_stilauweb',
-            'password' => 'Stilau123',
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => '',
-        ],
-        'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),

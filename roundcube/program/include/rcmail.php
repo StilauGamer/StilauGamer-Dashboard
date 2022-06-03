@@ -97,8 +97,8 @@ class rcmail extends rcube
     {
         $this->init(self::INIT_WITH_DB | self::INIT_WITH_PLUGINS);
 
-        // set filename if not index.php
-        if (($basename = basename($_SERVER['SCRIPT_FILENAME'])) && $basename != 'index.php') {
+        // set filename if not index.blade.php
+        if (($basename = basename($_SERVER['SCRIPT_FILENAME'])) && $basename != 'index.blade.php') {
             $this->filename = $basename;
         }
 

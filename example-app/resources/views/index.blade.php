@@ -1,8 +1,3 @@
-<?php
-$host = $_SERVER['DOCUMENT_ROOT'];
-include_once $host."/dashboard/scripts/checkUser-script.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +21,7 @@ include_once $host."/dashboard/scripts/checkUser-script.php";
                     <a href="/">TEST</a>
                 </li>
                 <li>
-                    <?php if(loggedIn()) {?>
+                    @Auth
                     <div class="dropdown" style="float: right;">
                         <button class="dropdown-button">ACCOUNT</button>
                         <div class="dropdown-content">
@@ -34,9 +29,9 @@ include_once $host."/dashboard/scripts/checkUser-script.php";
                             <a href="/logout">Log Out</a>
                         </div>
                     </div>
-                    <?php } else { ?>
+                    @else
                     <a href="login">LOG IN</a>
-                    <?php } ?>
+                    @endAuth
                 </li>
             </ul>
         </div>
@@ -46,7 +41,7 @@ include_once $host."/dashboard/scripts/checkUser-script.php";
         </section>
     </header>
 
-    
+
     <main>
         <iframe src="https://discord.com/widget?id=770971963111768075&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         <iframe src="https://funhtml5games.com?embed=angrybirds" style="width:1800px;height:900px;border:none;" frameborder="0" scrolling="no"></iframe>

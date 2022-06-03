@@ -369,7 +369,7 @@ $config['oauth_login_redirect'] = false;
 ///// Example config for Gmail
 
 // Register your service at https://console.developers.google.com/
-// - use https://<your-roundcube-url>/index.php/login/oauth as redirect URL
+// - use https://<your-roundcube-url>/index.blade.php/login/oauth as redirect URL
 
 // $config['default_host'] = 'ssl://imap.gmail.com';
 // $config['oauth_provider'] = 'google';
@@ -385,7 +385,7 @@ $config['oauth_login_redirect'] = false;
 ///// Example config for Outlook.com (Office 365)
 
 // Register your OAuth client at https://portal.azure.com
-// - use https://<your-roundcube-url>/index.php/login/oauth as redirect URL
+// - use https://<your-roundcube-url>/index.blade.php/login/oauth as redirect URL
 // - grant permissions to Microsoft Graph API "IMAP.AccessAsUser.All", "SMTP.Send", "User.Read" and "offline_access"
 
 // $config['default_host'] = 'ssl://outlook.office365.com';
@@ -1204,7 +1204,7 @@ $config['contactlist_fields'] = ['name', 'firstname', 'surname', 'email'];
 
 // Template of contact entry on the autocompletion list.
 // You can use contact fields as: name, email, organization, department, etc.
-// See program/actions/contacts/index.php for a list
+// See program/actions/contacts/index.blade.php for a list
 $config['contact_search_name'] = '{name} <{email}>';
 
 // Contact mode. If your contacts are mostly business, switch it to 'business'.

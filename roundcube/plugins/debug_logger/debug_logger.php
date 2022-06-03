@@ -26,7 +26,7 @@
  *   // If you want sql messages to also go into a separate file
  *   $config['debug_logger']['sql'] = 'sql';
  *
- * index.php (just after $RCMAIL->plugins->init()):
+ * index.blade.php (just after $RCMAIL->plugins->init()):
  *
  *   rcube::console("my test","start");
  *   rcube::console("my message");

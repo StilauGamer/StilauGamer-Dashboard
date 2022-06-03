@@ -14,7 +14,7 @@
 */
 
 if (!class_exists('rcmail_install', false) || !isset($RCI)) {
-    die("Not allowed! Please open installer/index.php instead.");
+    die("Not allowed! Please open installer/index.blade.php instead.");
 }
 
 ?>
@@ -171,7 +171,7 @@ if ($db_working) {
     $db_read = $DB->query("SELECT count(*) FROM " . $DB->quote_identifier($RCI->config['db_prefix'] . 'users'));
     if ($DB->is_error()) {
         $RCI->fail('DB Schema', "Database not initialized");
-        echo '<form action="index.php?_step=3" method="post">'
+        echo '<form action="index.blade.php?_step=3" method="post">'
             . '<p><input type="submit" name="initdb" value="Initialize database" /></p>'
             . '</form>';
 
@@ -184,7 +184,7 @@ if ($db_working) {
         $select = $RCI->versions_select(['name' => 'version']);
         $select->add('0.9 or newer', '');
 
-        echo '<form action="index.php?_step=3" method="post">'
+        echo '<form action="index.blade.php?_step=3" method="post">'
             . '<p class="suggestion">You should run the update queries to get the schema fixed.'
             . '<br/><br/>Version to update from: ' . $select->show('')
             . '&nbsp;<input type="submit" name="updatedb" value="Update" /></p>'

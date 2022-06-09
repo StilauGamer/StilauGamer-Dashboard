@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="UnattendedHostPersistenceState">
+    <option name="openedFilesInfos">
+      <list>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="2919" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/example-app/resources/views/dashboard/users/viewUsers.blade.php" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="279" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/example-app/app/Models/Navbar.php" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/example-app/app/Http/Controllers/navbarController.php" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="2675" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/example-app/resources/views/dashboard/home.blade.php" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="37" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/example-app/resources/views/test3.blade.php" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="132" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/example-app/app/Http/Controllers/testController.php" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="2162" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/example-app/routes/web.php" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="2415" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/example-app/resources/views/test.php" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="188" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/example-app/public/css/dashboard/users-table.css" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="973" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/example-app/public/css/dashboard/dashboard-phone.css" />
+        </OpenedFileInfo>
+      </list>
+    </option>
+  </component>
+</project>

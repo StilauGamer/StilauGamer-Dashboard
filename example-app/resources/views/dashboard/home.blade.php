@@ -1,27 +1,20 @@
 <?php
+use App\Models\Navbar;
+use App\Models\Themes;
+use App\Models\UserSettings;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\currentpageController;
 
-$host = $_SERVER['DOCUMENT_ROOT'];
-include_once $host."/dashboard/scripts/nav-script.php";
-include_once $host."/dashboard/scripts/theme-script.php";
-include_once $host."/dashboard/scripts/currentpage-script.php";
-
-# Checks if the user is logged in.
-if (!loggedIn()) {
-    header("location: /login");
-    exit();
-}
-$userInfo = getUserInfo(getUserId());
-
-# Updates the DB and tells what page the user is on.
-# setCurrentPage($userInfo["user_id"], getCurrentPage());
+$themeColors = Themes::get(userSettings::getThemeId(Auth::user()));
 
 # Getting the theme colors
-$backgroundColor = getThemeColor($userInfo["settings_theme"], "background-color");
-$mainColor = getThemeColor($userInfo["settings_theme"], "main-color");
-$boxColor = getThemeColor($userInfo["settings_theme"], "box-color");
-$textColor = getThemeColor($userInfo["settings_theme"], "text-color");
-$lineColor = getThemeColor($userInfo["settings_theme"], "line-color");
+$backgroundColor = $themeColors['background-color'];
+$mainColor = $themeColors['main-color'];
+$boxColor = $themeColors['box-color'];
+$textColor = $themeColors['text-color'];
+$lineColor = $themeColors['line-color'];
 
+$pageName = currentpageController::getCurrentPage();
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +23,7 @@ $lineColor = getThemeColor($userInfo["settings_theme"], "line-color");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StilauGamer | <?= getCurrentPage(); ?></title>
+    <title>StilauGamer | <?= $pageName ?></title>
     <link rel="stylesheet" type="text/css" href="/css/dashboard/dashboard.css">
     <link rel="stylesheet" type="text/css" href="/css/dashboard/dashboard-nav.css">
     <link rel="stylesheet" type="text/css" href="/css/dashboard/dashboard-phone.css">
@@ -41,7 +34,7 @@ $lineColor = getThemeColor($userInfo["settings_theme"], "line-color");
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
     <!-- Discord -->
-    <meta content="StilauGamer | <?= getCurrentPage() ?>" property="og:title" />
+    <meta content="StilauGamer | <?= $pageName ?>" property="og:title" />
     <meta content="StilauGamers Dashboard" property="og:description" />
     <meta content="xampp.stilaugamer.com/dashboard/home" property="og:url" />
     <meta content="#FFFFFF" data-react-helmet="true" name="theme-color" />
@@ -49,10 +42,10 @@ $lineColor = getThemeColor($userInfo["settings_theme"], "line-color");
 <body>
     <nav>
         <section id="nav-title">
-            <h1 class="title"><a href="youtube.com"><?= $userInfo["username"] ?></a></h1>
+            <h1 class="title"><a href="youtube.com"><?= Auth::user()->username; ?></a></h1>
         </section>
         <section id="nav-content">
-            <?= $navItems; ?>
+            <?= Navbar::get(Auth::user()); ?>
         </section>
         <section id="nav-footer">
             <a href="/logout">Log Out</a>
@@ -60,11 +53,11 @@ $lineColor = getThemeColor($userInfo["settings_theme"], "line-color");
     </nav>
     <main>
         <section id="main-title">
-            <h1 class="main-title"><?= getCurrentPage(); ?></h1>
+            <h1 class="main-title"><?= $pageName ?></h1>
             <div class="dropdown">
-                <button class="dropdown-button" onclick="dropdownFunc()"><?= getCurrentPage(); ?></button>
+                <button class="dropdown-button" onclick="dropdownFunc()"><?= $pageName ?></button>
                 <div class="dropdown-content">
-                    <?= $navItems; ?>
+                    <?= Navbar::get(Auth::user()); ?>
                     <a href="/logout" class="dropdown-footer">Log Out</a>
                 </div>
             </div>
@@ -75,14 +68,15 @@ $lineColor = getThemeColor($userInfo["settings_theme"], "line-color");
     </main>
 </body>
 <style>
-<?php
-if ($userInfo["settings_layout"] == 2) {
-    include_once("$host/css/dashboard/layouts/layout2.css");
-}
-?>
+<?php (userSettings::getLayoutId(Auth::user()) == 2) ? include_once("/css/dashboard/layouts/layout2.css") : null; ?>
 .active {
-    background: <?= $backgroundColor ?>;
-}
+         background: <?= $backgroundColor ?>;
+     }
+
+
+.active {
+        background: <?= $backgroundColor ?>;
+    }
 body {
     background: <?= $backgroundColor ?>;
     color: <?= $textColor ?>;

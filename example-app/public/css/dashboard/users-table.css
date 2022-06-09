@@ -8,9 +8,9 @@
 #grid-container {
     display: grid;
     box-sizing: border-box;
-    grid-template-columns: 50px auto auto 150px;
+    grid-template-columns: 50px auto auto auto 150px;
 }
-.grid-item:nth-child(-n+4) {
+.grid-item:nth-child(-n+5) {
     font-size: 20px;
     font-weight: bold;
 }
@@ -21,7 +21,7 @@
     height: 50px;
     font-size: 17px;
 }
-.grid-item:nth-child(4n):not(:nth-child(-n+4)) {
+.grid-item:nth-child(5n):not(:nth-child(-n+5)) {
     display: flex;
 }
 .grid-item>button {
@@ -34,4 +34,8 @@
     height: 40px;
     width: 50px;
     margin: 0 5px;
+}
+
+.grid-item>button>a {
+    text-decoration: none;
 }

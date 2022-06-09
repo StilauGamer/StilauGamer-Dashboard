@@ -1,5 +1,8 @@
 <?php
-include "dashboard/scripts/currentpage-script.php";
+
+use App\Http\Controllers\currentpageController;
+
+$pageName = currentpageController::getCurrentPage();
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +16,7 @@ include "dashboard/scripts/currentpage-script.php";
     <script src="https://kit.fontawesome.com/42811d1e0a.js" crossorigin="anonymous"></script>
 
     <!-- Discord -->
-    <meta content="StilauGamer | <?php echo getCurrentPage() ?>" property="og:title" />
+    <meta content="StilauGamer | <?= $pageName ?>" property="og:title" />
     <meta content="StilauGamers Login" property="og:description" />
     <meta content="xampp.stilaugamer.com/login" property="og:url" />
     <meta content="#FFFFFF" data-react-helmet="true" name="theme-color" />

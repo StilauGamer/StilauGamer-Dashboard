@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/masterminds/html5" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/mail_mime" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/crypt_gpg" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/net_smtp" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/pear_exception" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/symfony/polyfill-php70" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/net_ldap2" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/console_getopt" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/console_commandline" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/net_socket" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/auth_sasl" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/pear-core-minimal" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/pear/net_sieve" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/kolab/net_ldap3" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/endroid/qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/roundcube/plugin-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/roundcube/vendor/roundcube/rtf-html-php" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

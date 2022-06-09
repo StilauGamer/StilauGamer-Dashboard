@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/roundcube/vendor/composer" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/mail_mime" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/crypt_gpg" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/net_smtp" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/pear_exception" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/net_ldap2" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/console_getopt" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/console_commandline" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/net_socket" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/auth_sasl" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/pear-core-minimal" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/pear/net_sieve" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/kolab/net_ldap3" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/endroid/qr-code" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/roundcube/plugin-installer" />
+      <path value="$PROJECT_DIR$/roundcube/vendor/roundcube/rtf-html-php" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/roundcube/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+</project>
